@@ -44,6 +44,7 @@ const Home = ({ navigation }) => {
         >
             <Text>Submit</Text>
         </TouchableOpacity>
+
     </View>
 }
 
