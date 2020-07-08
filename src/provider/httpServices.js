@@ -1,17 +1,37 @@
-export const name = () => {
-    fetch('Web URL HERE', {
+export const Getcountry = async (countryname) => {
+    return fetch('https://restcountries.eu/rest/v2/name/' + countryname, {
         method: 'GET'
-        //Request Type 
+
     })
         .then((response) => response.json())
-        //If response is in json then in success
+
         .then((responseJson) => {
-            //Success 
+
             console.log(responseJson);
+            return responseJson;
         })
-        //If response is not in json then in error
+
         .catch((error) => {
-            //Error 
+
+            console.error(error);
+        });
+}
+
+export const getWeatherinfo = (name) => {
+    return fetch('http://api.weatherstack.com/current?access_key=ab88e8aab7be14160ed6cf36280a700d&query=' + name, {
+        method: 'GET'
+
+    })
+        .then((response) => response.json())
+
+        .then((responseJson) => {
+
+            console.log(responseJson);
+            return responseJson;
+        })
+
+        .catch((error) => {
+
             console.error(error);
         });
 }

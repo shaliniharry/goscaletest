@@ -9,6 +9,7 @@ import 'react-native-gesture-handler';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import React from 'react';
+import Mainnavigation from './src/routes';
 import {
   SafeAreaView,
   StyleSheet,
@@ -25,12 +26,13 @@ import {
   DebugInstructions,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
+import Home from './src/pages/home';
 
 const App = () => {
   return (
-    <View>
-      <Text>h</Text>
-    </View>
+    <NavigationContainer>
+      <Mainnavigation />
+    </NavigationContainer>
   );
 };
 
